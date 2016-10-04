@@ -1,0 +1,45 @@
+{
+  "name": "shopstyle-sdk-nodejs",
+  "version": "1.0.0",
+  "description": "Node access to the Shopstyle API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint **.js",
+    "test": "npm run lint && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PopSugar/shopstyle-sdk-nodejs.git"
+  },
+  "keywords": [
+    "Shopstyle",
+    "fashion",
+    "api",
+    "search"
+  ],
+  "author": "Arthur Cinader <acinader@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PopSugar/shopstyle-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/PopSugar/shopstyle-sdk-nodejs#readme",
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "jasmine": "^2.5.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "jasmine": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": "airbnb",
+    "rules": {}
+  }
+}
