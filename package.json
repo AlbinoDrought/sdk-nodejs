@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint **.js",
-    "test": "npm run lint && jasmine"
+    "test": "npm run lint && istanbul cover jasmine"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "api",
     "search"
   ],
-  "author": "Arthur Cinader <acinader@gmail.com>",
+  "author": "ShopStyle (hi@shopstyle.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PopSugar/shopstyle-sdk-nodejs/issues"
@@ -29,6 +29,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
+    "istanbul": "^0.4.5",
     "jasmine": "^2.5.2"
   },
   "eslintConfig": {
@@ -41,5 +42,10 @@
     },
     "extends": "airbnb",
     "rules": {}
+  },
+  "dependencies": {
+    "node-cache": "^4.1.0",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
   }
 }
