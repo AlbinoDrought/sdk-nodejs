@@ -50,7 +50,8 @@ const ss = new ShopStyle('test', 'US', false);
 Selecting a locale:
 ```
 const ss = new ShopStyle('test', 'JP');
-ss.categories({ depth: 1 }).then(result => console.log(result.categories[0].name));
+ss.categories({ depth: 1 })
+  .then(result => console.log(result.categories[0].name));
 
 > レディース　ファッション
 ```
