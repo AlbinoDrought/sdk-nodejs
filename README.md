@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/PopSugar/shopstyle-sdk-nodejs.svg?branch=master)](https://travis-ci.org/PopSugar/shopstyle-sdk-nodejs)
 [![codecov](https://codecov.io/gh/PopSugar/shopstyle-sdk-nodejs/branch/master/graph/badge.svg)](https://codecov.io/gh/PopSugar/shopstyle-sdk-nodejs)
 
-# shopstyle-sdk-nodejs
+# shopstyle-sdk
 
-A lightweight, caching wrapper for the ShopStyle API.
+A lightweight, caching wrapper for the ShopStyle API for nodejs.
 
 ```
 npm install --save shopstyle-sdk
