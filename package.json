@@ -1,6 +1,6 @@
 {
   "name": "shopstyle-sdk-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node access to the Shopstyle API",
   "main": "index.js",
   "scripts": {
