@@ -6,15 +6,17 @@
 A lightweight, caching wrapper for the ShopStyle API.
 
 ```
-npm install -S shopstyle-sdk
+npm install --save shopstyle-sdk
 ```
 
 
 To use:
 ```
 const ShopStyle = require('shopstyle-sdk');
-const ss = new ShopStyle('test');
-ss.product(359131344).then(result => console.log(response.name));
+
+// This is creating a shopstyle object using a 'test' api key.
+const shopstyle = new ShopStyle('test');
+shopstyle.product(359131344).then(result => console.log(response.name));
 
 > Matthew Williamson Jungle Whispers Gown
 
@@ -26,7 +28,7 @@ const options = {
   fl: ['b171', 'b28080', 'c7', 'd0', 'p31:40', 's85', 's87', 's89', 't0'],
   sort: 'PriceLoHi',
 };
-ss.products(options).then(response => console.log(response));
+shopstyle.products(options).then(response => console.log(response));
 
 > { metadata:
    { offset: 2,
@@ -42,15 +44,15 @@ ss.products(options).then(response => console.log(response));
 Caching:
 ```
 // override the default 12 hour cache to a one hour cache:
-const ss = new ShopStyle('test', 'US', { stdTTL: 3600});
+const shopstyle = new ShopStyle('test', 'US', { stdTTL: 3600});
 // disable the cache
-const ss = new ShopStyle('test', 'US', false);
+const shopstyle = new ShopStyle('test', 'US', false);
 ```
 
 Selecting a locale:
 ```
-const ss = new ShopStyle('test', 'JP');
-ss.categories({ depth: 1 })
+const shopstyle = new ShopStyle('test', 'JP');
+shopstyle.categories({ depth: 1 })
   .then(result => console.log(result.categories[0].name));
 
 > レディース　ファッション
