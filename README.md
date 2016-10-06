@@ -58,7 +58,7 @@ shopstyle.categories({ depth: 1 })
 > レディース　ファッション
 ```
 
-The sdk default to the US locale. You can instantiate the ShopStyle object with another supported locale.
+The sdk defaults to the US locale. You can instantiate the ShopStyle object with another supported locale.
 See the official ShopsStyle [API documentation](https://www.shopstylecollective.com/api/overview) for details on using the API.
 
 
