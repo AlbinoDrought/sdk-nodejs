@@ -14,7 +14,7 @@ To use:
 ```
 const ShopStyle = require('shopstyle-sdk');
 
-// This is creating a shopstyle object using a 'test' api key.
+// Create a shopstyle object using a 'test' api key.
 const shopstyle = new ShopStyle('test');
 shopstyle.product(359131344).then(result => console.log(response.name));
 
