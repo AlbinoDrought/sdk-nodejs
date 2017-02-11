@@ -1,6 +1,8 @@
 const url = require('url');
 const request = require('request-promise');
 const NodeCache = require('node-cache');
+// use non node promise lib so it'll work in browser.
+const Promise = require('bluebird');
 
 const DEFAULT_CACHE_OPTIONS = {
   stdTTL: (60 * 60 * 12), // 12 hours
