@@ -3,7 +3,7 @@
 
 # shopstyle-sdk
 
-A lightweight, caching wrapper for the ShopStyle API for nodejs.
+A lightweight, caching wrapper for the ShopStyle API.  Note that while originally anticipated for node only, this lib has now been used in browser, so if you try it in browser and have any problems, please open an issue so it can be addressed.
 
 ```
 npm install --save shopstyle-sdk
