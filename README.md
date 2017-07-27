@@ -44,7 +44,7 @@ shopstyle.products(options).then(response => console.log(response));
 Caching:
 ```
 // override the default 12 hour cache to a one hour cache:
-const shopstyle = new ShopStyle('test', 'US', { stdTTL: 3600});
+const shopstyle = new ShopStyle('test', 'US', { stdTTL: 3600 });
 // disable the cache
 const shopstyle = new ShopStyle('test', 'US', false);
 ```
@@ -65,7 +65,7 @@ See the official ShopsStyle [API documentation](https://www.shopstylecollective.
 
 
 ## Caching:
-shopstyle-sdk uses [node-cache](https://www.npmjs.com/package/node-cache) to cache results from the api.  The default ttl is twelve hours.  All options for configuring the cache can be passed through to node-cache.  The cache can also be disabled by passing ``false`` as the cache options during construction of the ShopStyle object.
+shopstyle-sdk uses [cachios](https://www.npmjs.com/package/cachios) to cache results from the api.  The default ttl is twelve hours.  All options for configuring the cache can be [passed through to cachios](https://www.npmjs.com/package/cachios#custom-cache-configuration).  The cache can also be disabled by passing ``false`` as the cache options during construction of the ShopStyle object.
 
 ## Supported Locales:
 The locale can be selected when constructing the ShopStyle object.  The following locales are supported:
