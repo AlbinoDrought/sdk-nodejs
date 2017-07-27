@@ -1,8 +1,6 @@
 const url = require('url');
-const request = require('request-promise');
-const NodeCache = require('node-cache');
-// use non node promise lib so it'll work in browser.
-const Promise = require('bluebird');
+const axios = require('axios');
+const cachios = require('cachios');
 
 const DEFAULT_CACHE_OPTIONS = {
   stdTTL: (60 * 60 * 12), // 12 hours
@@ -33,9 +31,9 @@ class ShopStyle {
 
     // Turn off caching by passing in false for cacheOptions
     if (cacheOptions) {
-      this.cache = new NodeCache(cacheOptions);
+      this.client = cachios.create(axios, cacheOptions);
     } else {
-      this.cache = false;
+      this.client = axios;
     }
 
     switch (this.locale) {
@@ -109,29 +107,8 @@ class ShopStyle {
 
   call(path, options = {}) {
     const uri = this.callUri(path, options);
-
-    if (this.cache) {
-      return new Promise((resolve, reject) => {
-        let value;
-        value = this.cache.get(uri);
-        if (!value) {
-          return request(uri).then((result) => {
-            value = JSON.parse(result);
-            const cacheResult = this.cache.set(uri, value);
-            if (!cacheResult) {
-              return reject('failed to cache result');
-            }
-
-            return resolve(value);
-          }, e => reject(e));
-        }
-
-        return resolve(value);
-      });
-    }
-
     // pull this out into a function
-    return request(uri).then(result => JSON.parse(result));
+    return this.client.get(uri).then(resp => resp.data);
   }
 }
 
